@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science USTHB — Carnet de Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="neon-bg" aria-hidden="true">
+  <div class="neon-blob blue"></div>
+  <div class="neon-blob purple"></div>
+</div>
+
+<div id="app">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V10"/><path d="M12 21V4"/><path d="M18 21v-7"/></svg>
+    </div>
+    <div class="navitem" data-view="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+      Accueil
+    </div>
+    <div class="navitem" data-view="notes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+      Notes
+    </div>
+    <div class="navitem" data-view="cours">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v16H6.5A2.5 2.5 0 0 0 4 20.5"/><path d="M4 4.5v16"/></svg>
+      Cours
+    </div>
+    <div class="spacer"></div>
+    <div class="navitem" data-view="apropos">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5"/><path d="M12 8h.01"/></svg>
+      Infos
+    </div>
+    <div class="navitem" data-view="parametres">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Réglages
+    </div>
+  </nav>
+
+  <main>
+    <div class="maxw">
+
+      <!-- HOME VIEW -->
+      <section id="view-home" class="home">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M6 21V10"/><path d="M12 21V4"/><path d="M18 21v-7"/></svg>
+        <div>
+          <h1>DATA SCIENCE</h1>
+          <div class="usthb">USTHB</div>
+        </div>
+        <div>
+          <p class="tagline">Carnet étudiant — Licence &amp; Master</p>
+          <p class="choose">Choisissez une section</p>
+        </div>
+
+        <div class="cards">
+          <div class="card" data-goto="cours">
+            <div class="inner">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v16H6.5A2.5 2.5 0 0 0 4 20.5"/><path d="M4 4.5v16"/></svg>
+              </div>
+              <h3>COURS</h3>
+              <p>Consulter les cours et les td/tp des modules</p>
+              <div class="go">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card purple" data-goto="notes">
+            <div class="inner">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+              </div>
+              <h3>NOTES</h3>
+              <p>Calculer vos moyennes et suivre vos résultats</p>
+              <div class="go">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOTES VIEW -->
+      <section id="view-notes" class="hidden">
+        <div class="breadcrumb" data-goto="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          Accueil
+        </div>
+        <div class="pagehead">
+          <h1>Carnet de Notes</h1>
+          <p>Calculez votre moyenne par semestre</p>
+        </div>
+
+        <div class="notes-grid">
+          <div class="panel">
+            <div class="field-label">Année d'étude</div>
+            <div class="segmented" id="yearTabs"></div>
+
+            <div class="field-label">Semestre</div>
+            <div class="segmented small" id="semTabs">
+              <button class="active" data-sem="S1">Semestre 1</button>
+              <button data-sem="S2">Semestre 2</button>
+            </div>
+
+            <div class="field-label">Modules</div>
+            <div class="table-scroll">
+              <table class="modules">
+                <thead>
+                  <tr>
+                    <th>Module</th>
+                    <th class="num">Crédits</th>
+                    <th class="num">Note TD</th>
+                    <th class="num">Note Examen</th>
+                    <th class="num">Moyenne</th>
+                  </tr>
+                </thead>
+                <tbody id="modulesBody"></tbody>
+              </table>
+            </div>
+
+            <div class="actions-row">
+              <button class="compute" id="computeBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Calculer la moyenne
+              </button>
+              <span class="weight-note">Moyenne = 40% TD + 60% examen (100% examen si le TD est vide)</span>
+            </div>
+          </div>
+
+          <div class="panel result-panel">
+            <h4>Résultat du semestre</h4>
+            <div class="ring-wrap">
+              <svg width="150" height="150" viewBox="0 0 150 150">
+                <defs>
+                  <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4f8dff"/>
+                    <stop offset="100%" stop-color="#9b5cf6"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="75" cy="75" r="62" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="11"/>
+                <circle id="ringProgress" cx="75" cy="75" r="62" fill="none" stroke="url(#ringGrad)" stroke-width="11" stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="389.6" transform="rotate(-90 75 75)"/>
+              </svg>
+              <div class="ring-center">
+                <div class="val" id="ringValue">—<span>/20</span></div>
+                <div class="sub">MOYENNE</div>
+              </div>
+            </div>
+
+            <div class="status-pill pending" id="statusPill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
+              <span id="statusText">À compléter</span>
+            </div>
+
+            <div class="stat-row">
+              <span class="lbl">Crédits validés</span>
+              <span class="val" id="creditsValides">— / —</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COURS VIEW -->
+      <section id="view-cours" class="hidden">
+        <div class="breadcrumb" data-goto="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          Accueil
+        </div>
+        <div class="pagehead">
+          <h1>Programme des modules</h1>
+          <p>Cliquez sur un module pour ouvrir son dossier Drive (clic droit pour modifier le lien)</p>
+        </div>
+        <div id="coursContainer"></div>
+      </section>
+
+      <!-- A PROPOS VIEW -->
+      <section id="view-apropos" class="hidden">
+        <div class="breadcrumb" data-goto="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          Accueil
+        </div>
+        <div class="pagehead">
+          <h1>Infos</h1>
+          <p>Tout ce qu'il faut savoir sur ton parcours</p>
+        </div>
+
+        <div class="cards" style="justify-content:flex-start;">
+          <div class="card" data-modal="dettes">
+            <div class="inner">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+              </div>
+              <h3>DETTES</h3>
+              <p>Comprendre les modules en dette</p>
+              <div class="go">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card purple" data-modal="specialite">
+            <div class="inner">
+              <div class="icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+              </div>
+              <h3>SPÉCIALITÉ</h3>
+              <p>Comprendre le master intégré</p>
+              <div class="go">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARAMETRES VIEW -->
+      <section id="view-parametres" class="hidden">
+        <div class="breadcrumb" data-goto="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          Accueil
+        </div>
+        <div class="pagehead"><h1>Réglages</h1></div>
+        <div class="panel simple-panel">
+          <p>Réinitialiser efface toutes les notes et tous les liens Drive enregistrés sur cet appareil.</p>
+          <button class="ghost" id="resetBtn">Réinitialiser mes données</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+    </button>
+    <h2 id="modalTitle">—</h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
